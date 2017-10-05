@@ -591,7 +591,7 @@ class MentionsInput extends React.Component {
     // Refocus input and set caret position to end of mention
     this.refs.input.focus();
 
-    let displayValue = this.props.displayTransform(suggestion.id, suggestion.display, mentionDescriptor.props.type);
+    let displayValue = this.props.displayTransform(suggestion.id, suggestion.display, mentionDescriptor.props.type) || '';
     if (mentionDescriptor.props.appendSpaceOnAdd) {
       displayValue = displayValue + ' '
     }
